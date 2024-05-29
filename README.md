@@ -1,4 +1,4 @@
-# Git Assignment 2
+#  Assignment 2
 
 This repository documents the completion of various Git operations for an assignment.
 
