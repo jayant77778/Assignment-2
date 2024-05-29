@@ -1,46 +1,86 @@
-# Assignment Summary: Git Operations
+# Git Assignment Documentation
 
-This repository documents the steps taken to complete an assignment involving various Git operations. Below is a summary of the tasks completed along with relevant details:
+This repository documents the completion of various Git operations for an assignment.
 
-## Tasks Completed
+## Setup a Remote Repository, Add a File, and Commit Changes
 
-### 1. Setup a Remote Repository and Initial Commit
+### Steps Taken:
 
-- **Setup Remote Repository:**
-  - Created a new repository named `Assignment-2` on GitHub.
-  - Added a README.md file with initial content ("Hello, Git!").
-  
-- **Commit Changes:**
-  - Initialized Git locally with `git init`.
-  - Added README.md to the staging area with `git add README.md`.
-  - Committed changes to the local repository with `git commit -m "Initial commit"`.
+1. **Setup Remote Repository:**
+   - Created a new repository named `Assignment-2` on GitHub.
+   - Initialized Git locally with `git init`.
+   - Linked the local repository to the remote GitHub repository:
+     ```bash
+     git remote add origin https://github.com/jayant77778/Assignment-2.git
+     ```
+   - Added README.md file with initial content.
+   - Staged README.md file for commit:
+     ```bash
+     git add README.md
+     ```
+   - Committed changes to the local repository:
+     ```bash
+     git commit -m "Initial commit"
+     ```
+   - Pushed changes to the remote master branch:
+     ```bash
+     git push -u origin master
+     ```
 
-### 2. Creating and Merging a New Branch
+## Create a New Branch, Commit Changes, and Merge
 
-- **Create a New Branch:**
-  - Created a new branch named `new-feature` using `git checkout -b new-feature`.
-  - Made changes to README.md on the `new-feature` branch.
+### Steps Taken:
 
-- **Commit and Push Changes:**
-  - Added changes (`git add README.md`) and committed (`git commit -m "Add new feature to README"`).
-  - Pushed `new-feature` branch to remote repository with `git push origin new-feature`.
+1. **Create and Switch to New Branch:**
+   - Created a new branch named `new-feature` and switched to it:
+     ```bash
+     git checkout -b new-feature
+     ```
+   - Made changes to README.md (e.g., added "New Feature") and committed:
+     ```bash
+     git add README.md
+     git commit -m "Add new feature to README"
+     ```
+   - Pushed `new-feature` branch to remote repository:
+     ```bash
+     git push origin new-feature
+     ```
 
-- **Merge Branches:**
-  - Merged `new-feature` branch into `master` using a pull request on GitHub.
+2. **Merge New Branch with Master:**
+   - Merged `new-feature` branch into `master` using a pull request on GitHub.
 
-### 3. Resolving Merge Conflicts
+## Undo Last Commit or Remove Last Created File
 
-- **Encountered Merge Conflict:**
-  - During merging `new-feature` into `master`, resolved conflicts in `README.md`.
-  - Manually edited conflicting sections in `README.md`, removed conflict markers, staged (`git add README.md`), and committed the changes (`git commit -m "Resolved merge conflicts"`).
-  - Pushed the merged changes to `master` on the remote repository with `git push origin master`.
+### Steps Taken:
 
-### 4. Handling Undo Operations
+1. **Undo Last Commit:**
+   - Undid the last commit using:
+     ```bash
+     git reset HEAD^
+     ```
 
-- **Undo Last Commit:**
-  - Used `git reset HEAD^` to undo the last commit locally.
+## Resolve Merge Conflicts
 
-### 5. Verification and Final Push
+### Steps Taken:
 
-- **Verification and Final Push:**
-  - Ensured local and remote branches 
+1. **Encountered Merge Conflicts:**
+   - During merging `new-feature` into `master`, resolved conflicts in `README.md`:
+     - Edited conflicting sections in `README.md` to resolve conflicts.
+     - Added the resolved file (`git add README.md`) and committed the changes:
+       ```bash
+       git commit -m "Resolved merge conflicts"
+       ```
+     - Pushed the changes to `master` on the remote repository:
+       ```bash
+       git push origin master
+       ```
+
+## Practice More Git Commands
+
+For additional Git commands and operations, refer to [Git - Book](https://git-scm.com/book/en/v6).
+
+## Summary
+
+This repository contains branches `master` and `new-feature`, documenting various Git operations including setup, branching, merging, conflict resolution, and undoing commits. Each section includes commands used and a brief description of the actions taken.
+
+For a detailed history, refer to the commit logs and branch history in the repository.
